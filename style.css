@@ -1,0 +1,33 @@
+html, body {
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    display: block;
+}
+
+#Options{
+    
+    width: 25%;
+
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+#playPauseButton, #resetButton{
+  display: inline-block;
+  color: black;
+  position: relative;
+  left: 45%;
+  width: 100px;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
