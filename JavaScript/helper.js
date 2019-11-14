@@ -53,8 +53,11 @@ function enableDraw(){
 }
 
 function resetSimulation(){
+  let elem = document.getElementById("playPauseButton");
+  if(elem.value == "Pause"){
+    enablePlay()
+  }
   paused = false;
-  enablePlay();
   removeParticles();
   setup();
   loop();
@@ -77,7 +80,6 @@ function canCreateParticle(){
       return true;
     }
     return false;
-
 }
 
 function removeParticles(){
@@ -91,8 +93,8 @@ function resizeWindow(width,height){
   let tooLarge = (wWidth > 650 && wHeight > 650);
   let tooSmall = (wWidth < 150 && wHeight < 150);
 
-  if(tooLarge && width > 0) { width *= -1; height *= -1; }
-  if(tooSmall && width < 0) { width *= 1; height *= 1; }
+  if(tooLarge && width > 0) { width = 0; height = 0; }
+  if(tooSmall && width < 0) { width = 0; height = 0; }
 
   wWidth += width;
   wHeight += height;

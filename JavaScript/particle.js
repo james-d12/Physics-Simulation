@@ -4,7 +4,7 @@ const damping = 0.75;
 class Particle{
 
     constructor(radius, color,
-        x=random(windowWidth-radius),y=random(windowHeight-radius),
+        x=random(wWidth-radius),y=random(wHeight-radius),
         xVel=random(-5,5), yVel=random(-5,5)){
         this.radius = radius;
         this.color = color;
@@ -12,11 +12,6 @@ class Particle{
         this.y = y;   
         this.xVel = xVel;
         this.yVel = yVel;
-        //calculate x and y velocities squared.
-        let sqrXV = pow(this.xVel, this.xVel);
-        let sqrYV = pow(this.yVel, this.yVel);
-        let resultant = sqrt(sqrXV, sqrYV);
-        this.energy = (0.5 * (this.mass * pow(resultant)));
     }
 
     print(){

@@ -20,7 +20,6 @@ function collision_draw(){
 
       }
     }
-  print("draw");
 }
     
 function collision_setup(){
@@ -28,6 +27,6 @@ function collision_setup(){
   let radius = getRadius();
   let color = getColor();
   for(let i = 0; i < amount; i++){
-    particles[i] = new Particle(radius,color);
+    particles.push(new Particle(radius,color));
   }
 }

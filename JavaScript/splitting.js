@@ -30,11 +30,11 @@ function splitting_draw(){
     }
 }
   
-  
 function splitting_setup(){
     let amount = getAmount();
     let radius = getRadius();
+    let color = getColor();
     for(let i = 0; i < amount; i++){
-      particles[i] = new Particle(radius,'black');
+      particles.push(new Particle(radius,color));
     }
 }
